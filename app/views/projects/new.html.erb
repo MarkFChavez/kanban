@@ -1,2 +1,31 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+
+<div class="row-fluid">
+	<div class="span6">
+		<%= image_tag "extras/create-project-logo.jpg" %>
+	</div>
+
+	<div class="span6">
+		<div class="create-project-block well">
+			<p class="lead"> Create A Project </p>
+			<hr />
+
+			<%= form_for(@project) do |f| %>
+				<div>
+					<span style="color:red">*</span> Title <br />
+					<%= f.text_field :title, placeholder: "Your title" %>
+				</div>
+
+				<div>
+					Description <br />
+					<%= f.text_area :description, style: "height:150px", placeholder: "Project Description" %>
+				</div>
+
+				<div class="form-actions">
+					<%= button_tag method: :post, class: "btn" do %>
+						<i class="icon icon-plus-sign"></i> Create Project
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

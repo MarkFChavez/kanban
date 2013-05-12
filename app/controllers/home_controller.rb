@@ -7,6 +7,9 @@ class HomeController < ApplicationController
   end
 
   def show
+  	#get latest projects
+  	@new_projects = current_user.projects.recent
+
   	#get number of projects
   	@projects_count = current_user.projects.size
   end

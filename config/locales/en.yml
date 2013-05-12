@@ -2,4 +2,5 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  create-project-success: "<b>Ahoy!</b> You have created a new project."
+  create-project-error: "<b>Oops!</b> an error has occurred while saving the project."

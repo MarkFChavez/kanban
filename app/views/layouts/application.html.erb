@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Kanban</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -23,6 +24,15 @@
 					    	<li class="active divider-vertical">
 					    		<%= link_to "Contact", "#" %>
 					    	</li>
+					    	<% if user_signed_in? %>
+					    		<li class="active divider-vertical">
+					    			<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+					    		</li>
+					    	<% else %>
+					    		<li class="active divider-vertical">
+					    			<%= link_to "Login", new_user_session_path %>
+					    		</li>
+					    	<% end %>
 					    </ul>
 					</div>
 			    </div>
@@ -34,7 +44,7 @@
 		<div class="row-fluid">
 			<div class="span12">
 				<div class="alert alert-success">
-					<%= notice %>
+					<%= notice.html_safe %>
 				</div>
 			</div>
 		</div>
@@ -44,7 +54,7 @@
 		<div class="row-fluid">
 			<div class="span12">
 				<div class="alert alert-error">
-					<%= alert %>
+					<%= alert.html_safe %>
 				</div>
 			</div>
 		</div>

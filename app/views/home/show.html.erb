@@ -1,6 +1,6 @@
 
 <div class="row-fluid">
-	<div class="span5 account-parent-block">
+	<div class="span5 account-parent-block visible-desktop">
 		
 		<%= image_tag "extras/default-profile-pic.jpg", class: "img img-polaroid pull-left", style: "width:150px;height:150px" %>
 
@@ -23,15 +23,17 @@
 
 	<div class="span7 account-parent-block">
 
-		<p class="lead"> I don't know what's here </p>
+		<p class="lead"> Recent Projects </p>
 		<hr />
 
 		<div>
-			<% if @projects_count == 0 %>
-				<p class="lead"> No projects yet. </p> 
+			<%= render @new_projects %>
+		</div>
 
-				<%= link_to "<i class='icon icon-plus'></i> Create A Project".html_safe, new_projects_path, class: "btn btn-large" %>
-			<% end %>
+		<div style="margin-top:20px">
+			<%= link_to "<i class='icon icon-hand-right'></i> View All Projects".html_safe, new_project_path, class: "btn btn-large" %>
+
+			<%= link_to "<i class='icon icon-plus'></i> Create A Project".html_safe, new_project_path, class: "btn btn-large" %>
 		</div>
 
 	</div>
