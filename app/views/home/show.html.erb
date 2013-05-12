@@ -11,9 +11,6 @@
 					<%= link_to "My Account", edit_user_registration_path, style: "margin-left:20px" %> 
 				</li>
 				<li> 
-					<%= link_to "Projects(#{@projects_count})", projects_path, style: "margin-left:20px" %> 
-				</li>
-				<li> 
 					<%= link_to "Logout", destroy_user_session_path, method: :delete, style: "margin-left:20px" %> 
 				</li>
 			</ul>
@@ -23,12 +20,13 @@
 
 	<div class="span7 account-parent-block">
 
-		<p class="lead"> Recent Projects </p>
+		<p class="lead"> Your Projects </p>
 		<hr />
 
 		<div>
 			<%= render @new_projects %>
-
+			<%= will_paginate @new_projects %>
+			
 			<%= "<strong> Woah! Be productive and do something. </strong>".html_safe if @new_projects.empty? %>
 		</div>
 
