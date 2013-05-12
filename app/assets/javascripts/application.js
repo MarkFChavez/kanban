@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function() {
+	$(".close-modal").on('click', function() {
+		$("#add-card-modal").modal('hide');
+	});
+});
