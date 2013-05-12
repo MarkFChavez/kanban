@@ -26,5 +26,15 @@
 	padding: 20px;
 }
 
+.task-block {
+	border:1px solid #CCC;
+	padding:10px;
+	height:400px;
+	overflow: auto;
+	p.lead {
+		text-align:center;
+	}
+}
+
 @import 'bootstrap';
 @import 'bootstrap-responsive';
