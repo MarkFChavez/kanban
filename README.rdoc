@@ -1,1 +1,8 @@
 == Kanban.PH
+
+To-do
+
+* Task editing (Todo, Doing, Done)
+* Cancan integration
+* Contact us (Use delayed_job?)
+* active admin
