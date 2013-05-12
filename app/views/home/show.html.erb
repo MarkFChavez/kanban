@@ -28,6 +28,8 @@
 
 		<div>
 			<%= render @new_projects %>
+
+			<%= "<strong> Woah! Be productive and do something. </strong>".html_safe if @new_projects.empty? %>
 		</div>
 
 		<div style="margin-top:20px">
