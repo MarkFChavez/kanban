@@ -19,7 +19,7 @@
 			</div>
 
 			<div>
-
+				<%= render @presenter.todo %>
 			</div>
 		</div>
 	</div>
@@ -31,7 +31,7 @@
 			</div>
 
 			<div>
-
+				<%= render @presenter.doing %>
 			</div>
 		</div>
 	</div>
@@ -43,7 +43,7 @@
 			</div>
 
 			<div>
-
+				<%= render @presenter.done %>
 			</div>
 		</div>
 	</div>
@@ -52,14 +52,19 @@
     <div id="add-card-modal" class="modal hide fade">
 	    <div class="modal-header">
 		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		    <h3>Add a Task</h3>
+		    <h3> Add a Task for <%= @project.title %> </h3>
 	    </div>
 
 	    <div class="modal-body">
 	    	<%= form_for([@project,@task]) do |f| %>
 	    		<div>
-	    			Task Name <br />
-	    			<%= f.text_field :name, placeholder: "Enter task name" %>
+	    			<label> Task Name </label>
+	    			<%= f.text_area :name, placeholder: "Enter task name", required: "required", style: "height:100px" %> 
+	    		</div>
+
+	    		<div>
+	    			<label> Status </label>
+	    			<%= f.select :status, Task::VALID_STATUS %>
 	    		</div>
 
 	    		<div class="form-actions">
@@ -72,6 +77,5 @@
 
 	    <div class="modal-footer">
 		    <a href="#" data-parent="#add-card-modal" class="btn close-modal">Close</a>
-		    <a href="#" class="btn btn-primary">Save changes</a>
 	    </div>
     </div>
