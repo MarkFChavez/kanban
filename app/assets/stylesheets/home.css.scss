@@ -11,5 +11,25 @@
 	height:200px
 }
 
+.account-parent-block {
+	padding:20px 10px 20px 10px;
+}
+
+.account-child-block {
+
+	padding: 10px;
+
+	.account-opt {
+
+		margin-top:10px;
+
+		li {
+			
+		}
+
+	}
+}
+
+
 @import 'bootstrap';
 @import 'bootstrap-responsive';
