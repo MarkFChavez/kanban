@@ -7,13 +7,12 @@ gem 'rails', '3.2.9'
 
 group :development, :test do
 	gem 'sqlite3'
+	gem 'newrelic_rpm'
 end
 
 group :production do
 	gem 'pg'
 end
-
-gem 'newrelic_rpm'
 
 # Gems used only for assets and not required
 # in production environments by default.
