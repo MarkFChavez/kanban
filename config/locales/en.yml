@@ -4,3 +4,4 @@
 en:
   create-project-success: "<b>Ahoy!</b> You have created a new project."
   create-project-error: "<b>Oops!</b> an error has occurred while saving the project."
+  delete-project-success: "<b>Ahoy!</b> You have deleted the project."

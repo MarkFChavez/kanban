@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
     if @project.save
       redirect_to dashboard_path, notice: t('create-project-success')
     else
-      redirect_to new_projects_path, alert: t('create-project-error')
+      redirect_to new_project_path, alert: t('create-project-error')
     end
   end
 
@@ -26,5 +26,9 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    @project = current_user.projects.find(params[:id])
+    @project.destroy
+
+    redirect_to dashboard_path, notice: t('delete-project-success')
   end
 end

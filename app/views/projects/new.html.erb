@@ -19,7 +19,9 @@
 				<div class="form-actions">
 					<%= button_tag method: :post, class: "btn" do %>
 						<i class="icon icon-plus-sign"></i> Create Project
-					<% end %>
+					<% end %> 
+
+					<%= link_to "<i class='icon icon-chevron-left'></i> Back".html_safe, dashboard_path, class: "btn" %>
 				</div>
 			<% end %>
 		</div>
