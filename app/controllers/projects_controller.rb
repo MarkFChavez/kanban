@@ -5,12 +5,6 @@ class ProjectsController < ApplicationController
   def show
     @project = current_user.projects.find(params[:id])
     @task = @project.tasks.new
-
-    #use presenter
-    #@todo_tasks = @project.tasks.todo
-    #@doing_tasks = @project.tasks.doing
-    #@done_tasks = @project.tasks.done
-
     @presenter = TaskPresenters::ShowPresenter.new(@project)
   end
 

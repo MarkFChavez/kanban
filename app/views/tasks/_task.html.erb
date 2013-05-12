@@ -1,3 +1,11 @@
-<div style="margin-top:5px">
-	<%= task.name %>
+<div class="each-task-block">
+	<div>
+		<blockquote> <%= task.name %> </blockquote>
+	</div>
+
+	<div>
+		<p class="pull-right">created <%= distance_of_time_in_words task.created_at, Time.now %> ago.</p>
+	</div>
+
+	<div class="clearfix"></div>
 </div>

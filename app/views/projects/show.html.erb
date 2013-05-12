@@ -15,7 +15,7 @@
 	<div class="span4">
 		<div class="task-block">
 			<div class="alert alert-warning">
-				<p class="lead"> To-Do </p>
+				<p class="lead"> To-Do(<%= @presenter.todo.size %>) </p>
 			</div>
 
 			<div>
@@ -27,7 +27,7 @@
 	<div class="span4">
 		<div class="task-block">
 			<div class="alert alert-error">
-				<p class="lead"> Doing </p>
+				<p class="lead"> Doing(<%= @presenter.doing.size %>) </p>
 			</div>
 
 			<div>
@@ -39,7 +39,7 @@
 	<div class="span4">
 		<div class="task-block">
 			<div class="alert alert-success">
-				<p class="lead"> Done </p>
+				<p class="lead"> Done(<%= @presenter.done.size %>) </p>
 			</div>
 
 			<div>
