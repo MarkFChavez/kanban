@@ -7,10 +7,31 @@
 		<div class="account-child-block">
 			<span style="margin-left:20px" class="badge badge-important"> Ahoy <%= current_user.email %>! </span>
 			<ul class="unstyled account-opt">
-				<li> <%= link_to "My Account", edit_user_registration_path, style: "margin-left:20px" %> </li>
-				<li> <%= link_to "Projects", "#", style: "margin-left:20px" %> </li>
-				<li> <%= link_to "Logout", destroy_user_session_path, method: :delete, style: "margin-left:20px" %> </li>
+				<li> 
+					<%= link_to "My Account", edit_user_registration_path, style: "margin-left:20px" %> 
+				</li>
+				<li> 
+					<%= link_to "Projects(#{@projects_count})", projects_path, style: "margin-left:20px" %> 
+				</li>
+				<li> 
+					<%= link_to "Logout", destroy_user_session_path, method: :delete, style: "margin-left:20px" %> 
+				</li>
 			</ul>
+		</div>
+
+	</div>
+
+	<div class="span7 account-parent-block">
+
+		<p class="lead"> I don't know what's here </p>
+		<hr />
+
+		<div>
+			<% if @projects_count == 0 %>
+				<p class="lead"> No projects yet. </p> 
+
+				<%= link_to "<i class='icon icon-plus'></i> Create A Project".html_safe, new_projects_path, class: "btn btn-large" %>
+			<% end %>
 		</div>
 
 	</div>

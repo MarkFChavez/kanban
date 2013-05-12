@@ -1,23 +1,12 @@
 Kanban::Application.routes.draw do
-  
-  get "projects/index"
-
-  get "projects/show"
-
-  get "projects/new"
-
-  get "projects/create"
-
-  get "projects/edit"
-
-  get "projects/update"
-
-  get "projects/destroy"
 
   root to: "home#index"
   match "/dashboard" => "home#show", as: :dashboard
 
   devise_for :users
+
+  #resources
+  resource :projects
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
