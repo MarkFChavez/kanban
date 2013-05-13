@@ -34,4 +34,20 @@ class TasksController < ApplicationController
   def get_project
     @project = current_user.projects.find(params[:project_id])
   end
+
+  def change_status
+    @task = @project.tasks.find(params[:id])
+    @action = params[:act]
+
+    if !@action.nil?
+      @task.status = @action
+      if @task.save 
+        redirect_to @project, notice: t('change-status-success')
+      else
+        redirect_to @project, alert: t('change-status-error')
+      end
+    else
+      redirect_to @project, alert: t('change-status-action-empty')
+    end
+  end
 end

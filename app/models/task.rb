@@ -11,4 +11,8 @@ class Task < ActiveRecord::Base
   scope :todo, where(status: "TODO")
   scope :doing, where(status: "DOING")
   scope :done, where(status: "DONE")
+
+  def to_param
+  	"#{id}-#{name.parameterize}"
+  end
 end

@@ -7,3 +7,6 @@ en:
   delete-project-success: "<b>Ahoy!</b> You have deleted the project."
   create-task-success: "<b>Ahoy!</b> You have created a new task."
   create-task-error: "<b>Oops!</b> an error has occurred while creating a task."
+  change-status-success: "<b>Ahoy!</b> You have successfully changed your task's status."
+  change-status-error: "<b>Oops!</b> an error has occurred while moving task."
+  change-status-action-empty: "<b>Oops!</b> action params missing!"

@@ -7,7 +7,9 @@ Kanban::Application.routes.draw do
 
   #resources
   resources :projects do
-    resources :tasks
+    resources :tasks do
+      put 'change_status', on: :member
+    end
   end
   
   # The priority is based upon order of creation:

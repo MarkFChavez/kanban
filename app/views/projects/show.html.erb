@@ -19,7 +19,7 @@
 			</div>
 
 			<div>
-				<%= render @presenter.todo %>
+				<%= render @presenter.todo, clazz: "alert alert-warning" %>
 			</div>
 		</div>
 	</div>
@@ -31,7 +31,7 @@
 			</div>
 
 			<div>
-				<%= render @presenter.doing %>
+				<%= render @presenter.doing, clazz: "alert alert-error" %>
 			</div>
 		</div>
 	</div>
@@ -43,7 +43,7 @@
 			</div>
 
 			<div>
-				<%= render @presenter.done %>
+				<%= render @presenter.done, clazz: "alert alert-success" %>
 			</div>
 		</div>
 	</div>
