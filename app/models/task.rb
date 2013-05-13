@@ -3,6 +3,7 @@ class Task < ActiveRecord::Base
   VALID_STATUS = ["TODO", "DOING", "DONE"]
 
   belongs_to :project, counter_cache: :tasks_count
+  has_many :comments, dependent: :destroy
   attr_accessible :name, :status
 
   validates :name, presence: true

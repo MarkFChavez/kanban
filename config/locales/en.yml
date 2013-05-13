@@ -10,3 +10,4 @@ en:
   change-status-success: "<b>Ahoy!</b> You have successfully changed your task's status."
   change-status-error: "<b>Oops!</b> an error has occurred while moving task."
   change-status-action-empty: "<b>Oops!</b> action params missing!"
+  delete-task-success: "<b>Ahoy!</b> You have successfully deleted your task."

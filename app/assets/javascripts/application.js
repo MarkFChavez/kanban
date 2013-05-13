@@ -17,6 +17,7 @@
 
 $(document).ready(function() {
 	$(".close-modal").on('click', function() {
-		$("#add-card-modal").modal('hide');
+		var id = $(this).data('parent');
+		$(id).modal('hide');
 	});
 });

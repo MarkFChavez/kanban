@@ -21,9 +21,6 @@
 					    	<li class="active divider-vertical">
 					    		<%= link_to "Home", root_path %>
 					    	</li>
-					    	<li class="active divider-vertical">
-					    		<%= link_to "Contact", "#" %>
-					    	</li>
 					    	<% if user_signed_in? %>
 					    		<li class="active divider-vertical">
 					    			<%= link_to "Logout", destroy_user_session_path, method: :delete %>

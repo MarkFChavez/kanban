@@ -11,11 +11,21 @@
 			    <span class="caret"></span>
 			    </a>
 			    <ul class="dropdown-menu">
-			    	<li> <%= link_to "Mark as Todo", change_status_project_task_path(task.project, task, act: "TODO"), method: :put %> </li>
+			    	<li> 
+			    		<%= link_to "Mark as Todo", change_status_project_task_path(task.project, task, act: "TODO"), method: :put %> 
+			    	</li>
+			    	<li> 
+			    		<%= link_to "Mark as Doing", change_status_project_task_path(task.project, task, act: "DOING"), method: :put %> 
+			    	</li>
+			    	<li> 
+			    		<%= link_to "Mark as Done", change_status_project_task_path(task.project, task, act:"DONE"), method: :put %> 
+			    	</li>
+
 			    	<li class="divider"></li>
-			    	<li> <%= link_to "Mark as Doing", change_status_project_task_path(task.project, task, act: "DOING"), method: :put %> </li>
-			    	<li class="divider"></li>
-			    	<li> <%= link_to "Mark as Done", change_status_project_task_path(task.project, task, act:"DONE"), method: :put %> </li>
+
+			    	<li>
+			    		<%= link_to "Remove Task", project_task_path(task.project, task), method: :delete, confirm: "Delete this task?" %>
+			    	</li>
 			    </ul>
 		    </div>
 	</div>

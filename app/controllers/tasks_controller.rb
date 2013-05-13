@@ -29,6 +29,10 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    @task = @project.tasks.find(params[:id])
+    @task.destroy
+
+    redirect_to @project, notice: t('delete-task-success')
   end
 
   def get_project
